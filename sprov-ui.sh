@@ -4,32 +4,8 @@
 #   System Required: CentOS 7+ / Debian 8+ / Ubuntu 16+
 #   Description: Manage sprov-ui
 #   version: v1.1.1
-#   Author: sprov
-#   Blog: https://blog.sprov.xyz
-#   Github - sprov-ui: https://github.com/sprov065/sprov-ui
+#   Github - sprov-ui: https://github.com/nianjiuren/sprov-ui
 #======================================================
-
-#       ┏┓    ┏┓  + +
-#      ┏┛┻━━━━┛┻┓ + +
-#      ┃        ┃ + +
-#      ┃   ━    ┃ + + + + +
-#     ████━████ ┃ + + + + +
-#      ┃        ┃ +
-#      ┃   ┻    ┃
-#      ┃        ┃ + +
-#      ┗━┓    ┏━┛
-#        ┃    ┃
-#        ┃    ┃ + + + +
-#        ┃    ┃ Codes are far away from bugs with the animal protecting
-#        ┃    ┃ + 神兽保佑,代码无bug
-#        ┃    ┃
-#        ┃    ┃ +
-#        ┃    ┗━━━┓ + +
-#        ┃        ┣┓
-#        ┃       ┏┛
-#        ┗┓┓┏━┳┓┏┛+ + + +
-#         ┃┫┫ ┃┫┫
-#         ┗┻┛ ┗┻┛+ + + +
 
 red='\033[0;31m'
 green='\033[0;32m'
@@ -135,7 +111,7 @@ install_soft() {
 
 install() {
     install_base
-    bash <(curl -L -s https://github.com/sprov065/sprov-ui/raw/master/install.sh)
+    bash <(curl -L -s https://github.com/nianjiuren/sprov-ui/raw/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -155,7 +131,7 @@ update() {
         return 0
     fi
     install_base
-    bash <(curl -L -s https://github.com/sprov065/sprov-ui/raw/master/install.sh)
+    bash <(curl -L -s https://github.com/nianjiuren/sprov-ui/raw/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             restart
@@ -184,9 +160,7 @@ uninstall() {
     echo ""
     echo -e "${gree}卸载成功${plain}，感谢你的使用，如果你有更多的建议或意见，可以在以下地方进行讨论: "
     echo ""
-    echo -e "Telegram 群组: ${green}https://t.me/sprov_blog${plain}"
-    echo -e "Github issues: ${green}https://github.com/sprov065/sprov-ui/issues${plain}"
-    echo -e "博客: ${green}https://blog.sprov.xyz/sprov-ui${plain}"
+    
 
     if [[ $# == 0 ]]; then
         before_show_menu
@@ -326,7 +300,7 @@ show_log() {
 }
 
 install_bbr() {
-    bash <(curl -L -s https://github.com/sprov065/blog/raw/master/bbr.sh)
+    bash <(curl -L -s https://github.com/nianjiuren/blog/raw/master/bbr.sh)
     if [[ $? == 0 ]]; then
         echo ""
         echo -e "${green}安装 bbr 成功${plain}"
@@ -339,7 +313,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/sprov-ui -N --no-check-certificate https://github.com/sprov065/sprov-ui/raw/master/sprov-ui.sh
+    wget -O /usr/bin/sprov-ui -N --no-check-certificate https://github.com/nianjiuren/sprov-ui/raw/master/sprov-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
@@ -446,7 +420,7 @@ show_menu() {
     echo -e "
   ${green}sprov-ui 面板管理脚本${plain} ${red}${version}${plain}
 
---- https://blog.sprov.xyz/sprov-ui ---
+--- sprov-ui ---
 
   ${green}0.${plain} 退出脚本
 ————————————————
