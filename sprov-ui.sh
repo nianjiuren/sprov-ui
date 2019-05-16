@@ -300,7 +300,7 @@ show_log() {
 }
 
 install_bbr() {
-    bash <(curl -L -s https://github.com/nianjiuren/sprov-ui/blob/master/bbr.sh)
+    bash <(curl -L -s https://github.com/nianjiuren/sprov-ui/raw/master/bbr.sh)
     if [[ $? == 0 ]]; then
         echo ""
         echo -e "${green}安装 bbr 成功${plain}"
