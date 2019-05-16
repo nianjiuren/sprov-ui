@@ -1,5 +1,4 @@
 # sprov-ui
- 一个支持多协议多用户的v2ray Web面板
  
 # 支持的功能
  - https 访问面板
