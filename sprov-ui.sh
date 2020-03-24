@@ -418,7 +418,7 @@ show_usage() {
 
 show_menu() {
     echo -e "
-  ${green}sprov-ui 面板管理脚本${plain} ${red}${version}${plain}
+  ${green}强哥 面板管理脚本${plain} ${red}${version}${plain}
 
 --- sprov-ui ---
 
